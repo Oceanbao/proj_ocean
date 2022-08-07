@@ -69,7 +69,10 @@ const PageWrap = () => (
       </Text>
       <Text style={styles.title}>Don Quijote de la Mancha</Text>
       <Text style={styles.author}>Miguel de Cervantes</Text>
-      <Image style={styles.image} src="http://static.donquijote.org/images/blogs/dq-reg/don-quijote-de-la-mancha.jpg" />
+      <Image
+        style={styles.image}
+        src="https://static.donquijote.org/images/blogs/dq-reg/don-quijote-de-la-mancha.jpg"
+      />
       <Subtitle>Capítulo I: Que trata de la condición y ejercicio del famoso hidalgo D. Quijote de la Mancha</Subtitle>
       <Text style={styles.text}>
         En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de
