@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     fontSize: 12,
-    fontFamily: 'Lato Bold',
+    // fontFamily: 'Lato Bold',
     textAlign: 'center',
     marginTop: 15,
     paddingTop: 5,
@@ -48,25 +48,25 @@ const styles = StyleSheet.create({
   },
 })
 
-Font.register({
-  family: 'Open Sans',
-  src: `https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf`,
-})
+// Font.register({
+//   family: 'Open Sans',
+//   src: `https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf`,
+// })
 
-Font.register({
-  family: 'Lato',
-  src: `https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf`,
-})
+// Font.register({
+//   family: 'Lato',
+//   src: `https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf`,
+// })
 
-Font.register({
-  family: 'Lato Italic',
-  src: `https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf`,
-})
+// Font.register({
+//   family: 'Lato Italic',
+//   src: `https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf`,
+// })
 
-Font.register({
-  family: 'Lato Bold',
-  src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`,
-})
+// Font.register({
+//   family: 'Lato Bold',
+//   src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`,
+// })
 
 const Resume = (props: any) => (
   <Page {...props} style={styles.page}>
@@ -91,7 +91,7 @@ const Page = () => (
     title="Resume"
   >
     <Resume size="A4" />
-    <Resume orientation="landscape" size="A4" />
+    {/* <Resume orientation="landscape" size="A4" /> */}
     <Resume size={[380, 1250]} />
   </Document>
 )
