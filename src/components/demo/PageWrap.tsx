@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     textAlign: 'center',
-    fontFamily: 'Oswald',
   },
   author: {
     fontSize: 12,
@@ -20,7 +19,6 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 18,
     margin: 12,
-    fontFamily: 'Oswald',
   },
   text: {
     margin: 12,
@@ -47,11 +45,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'grey',
   },
-})
-
-Font.register({
-  family: 'Oswald',
-  src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
 })
 
 // @ts-ignore
