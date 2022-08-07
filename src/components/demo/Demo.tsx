@@ -1,6 +1,5 @@
 import { PDFViewer, PDFDownloadLink, BlobProvider } from '@react-pdf/renderer'
 
-import Resume from './resume'
 import PageWrap from './PageWrap'
 
 const Viewer = () => {
