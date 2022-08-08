@@ -54,9 +54,9 @@ const Subtitle = ({ children, ...props }) => (
   </Text>
 )
 
-const PageWrap = () => (
+const PageWrap = (
   <Document>
-    <Page size="A4" style={styles.body} wrap>
+    <Page style={styles.body} wrap>
       <Text style={styles.header} fixed>
         ~ Created with react-pdf ~
       </Text>

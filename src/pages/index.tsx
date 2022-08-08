@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 
-const DynViewer = dynamic(() => import('@components/demo/Demo'), {
+const DynViewer = dynamic(() => import('@components/demo'), {
   ssr: false,
 })
 
