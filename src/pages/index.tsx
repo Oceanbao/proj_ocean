@@ -1,4 +1,4 @@
-import SinglePage from '@components/SinglePage'
+import SinglePage, { Spinner } from '@components/SinglePage'
 
 const PDF = '/oceancv_eng.pdf'
 

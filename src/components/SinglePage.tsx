@@ -51,7 +51,7 @@ const Loading = () => {
   )
 }
 
-const Spinner = () => <div className="spinnerBox"></div>
+export const Spinner = () => <div className="spinnerBox"></div>
 
 export default function SinglePage({ pdf, width }: { pdf: any; width: number }) {
   const [numPages, setNumPages] = useState<number | null>(null)
