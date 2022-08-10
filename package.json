@@ -20,7 +20,7 @@
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^2.3.0",
+    "daisyui": "^2.22.0",
     "jotai": "^1.7.7",
     "next": "12.2.4",
     "next-themes": "^0.2.0",
@@ -42,6 +42,7 @@
     "@types/react-pdf": "^5.7.2",
     "@types/testing-library__jest-dom": "^5.14.5",
     "autoprefixer": "^10.4.8",
+    "copy-webpack-plugin": "^11.0.0",
     "eslint": "8.21.0",
     "eslint-config-next": "^12.2.4",
     "eslint-config-prettier": "^8.5.0",
