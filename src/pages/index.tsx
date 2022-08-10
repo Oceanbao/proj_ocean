@@ -26,7 +26,7 @@ const Viewer = () => {
   const [width, setWidth] = useState<number>(0)
 
   useEffect(() => {
-    const scale = 0.98
+    const scale = 0.95
     setWidth(window.innerWidth * scale)
   }, [])
 
