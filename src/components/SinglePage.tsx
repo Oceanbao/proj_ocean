@@ -33,6 +33,26 @@ TITIAN RED
 212 72 72
 */
 
+const Loading = () => {
+  return (
+    <div className="absolute top-[5%] left-[50%] translate-x-[-50%]">
+      {Array.from(Array(5).keys()).map((item, i) => (
+        <div key={i} className="w-[80vw] h-20 border-2 rounded-md mx-auto">
+          <div className="flex animate-pulse flex-row items-center h-full justify-center space-x-5">
+            <div className="w-[18vw] bg-gray-300 h-12 rounded-full "></div>
+            <div className="flex flex-col space-y-3">
+              <div className="w-[58vw] bg-gray-300 h-6 rounded-md "></div>
+              <div className="w-[58vw] bg-gray-300 h-6 rounded-md "></div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+const Spinner = () => <div className="spinnerBox"></div>
+
 export default function SinglePage({ pdf, width }: { pdf: any; width: number }) {
   const [numPages, setNumPages] = useState<number | null>(null)
   const [pageNumber, setPageNumber] = useState(1) //setting 1 to show fisrt page
@@ -56,7 +76,7 @@ export default function SinglePage({ pdf, width }: { pdf: any; width: number }) 
 
   return (
     <>
-      <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
+      <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess} loading={<Spinner />}>
         <Page width={width} pageNumber={pageNumber} />
       </Document>
 
