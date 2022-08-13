@@ -1,6 +1,7 @@
-import SinglePage, { Spinner } from '@components/SinglePage'
+import SinglePage from '@components/SinglePage'
 
-const PDF = '/oceancv_eng.pdf'
+const pdfEng = '/oceancv_eng.pdf'
+const pdfChn = '/oceancv_chn.pdf'
 
 import { useEffect, useState } from 'react'
 
@@ -13,8 +14,8 @@ const Viewer = () => {
   }, [])
 
   return (
-    <div className="h-screen w-screen overflow-auto">
-      <SinglePage pdf={PDF} width={width} />
+    <div className="h-screen w-screen">
+      <SinglePage pdfEng={pdfEng} pdfChn={pdfChn} width={width} />
     </div>
   )
 }
