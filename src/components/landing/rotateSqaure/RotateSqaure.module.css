@@ -1,0 +1,95 @@
+.rotation {
+  @apply flex justify-center items-center min-h-screen;
+  animation: changeBgColor 4s steps(1) infinite;
+}
+
+.rotationAlt {
+  @apply flex justify-center items-center min-h-screen;
+  animation: changeBgColorAlt 4s steps(1) infinite;
+}
+
+.loaderAlt {
+  @apply relative w-[50px] h-[50px] bg-[#000];
+  animation: rotateInner 1s linear infinite;
+}
+
+.loaderAlt div {
+  @apply absolute w-full h-full bg-[#000];
+  animation: rotateOuter 1s linear infinite;
+}
+
+.loaderAlt::before,
+.loaderAlt div::before {
+  @apply content-[""] absolute top-[2px] left-[2px] right-[2px] bottom-[2px] bg-[#003153];
+}
+
+.loader {
+  @apply relative w-[50px] h-[50px] bg-[#000];
+  animation: rotateInner 1s linear infinite;
+}
+
+.loader div {
+  @apply absolute w-full h-full bg-[#000];
+  animation: rotateOuter 1s linear infinite;
+}
+
+.loader::before,
+.loader div::before {
+  @apply content-[""] absolute top-[2px] left-[2px] right-[2px] bottom-[2px] bg-[#fff];
+}
+
+@keyframes rotateOuter {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%,
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateInner {
+  0% {
+    transform: rotate(90deg);
+  }
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes changeBgColor {
+  0% {
+    background: #ff0;
+  }
+  25% {
+    background: #0f0;
+  }
+  50% {
+    background: #ff4786;
+  }
+  75% {
+    background: #2da2ff;
+  }
+  100% {
+    background: #ff0;
+  }
+}
+
+@keyframes changeBgColorAlt {
+  0% {
+    background: #002fa7;
+  }
+  25% {
+    background: #470024;
+  }
+  50% {
+    background: #fbd26a;
+  }
+  75% {
+    background: #003153;
+  }
+  100% {
+    background: #d44848;
+  }
+}

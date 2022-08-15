@@ -1,0 +1,3 @@
+.typing {
+  @apply absolute top-[20vh] left-[50vh] text-[color:#fff];
+}

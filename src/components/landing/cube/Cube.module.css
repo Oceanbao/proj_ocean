@@ -1,0 +1,172 @@
+.root {
+  @apply w-screen h-screen flex justify-center items-center overflow-hidden;
+  background: var(--background);
+}
+
+.dotsContainer {
+  @apply absolute w-full h-full;
+  animation: fadein 1.2s ease-in, spin 180s linear infinite;
+}
+
+.dotsContainer > * {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  height: 200%;
+  width: 100%;
+  background-size: 200px 200px;
+  background-image: radial-gradient(2px 2px at 40px 60px, var(--dot-color), rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 20px 50px, var(--dot-color), rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 30px 100px, var(--dot-color), rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 190px 150px, var(--dot-color), rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  transition: background-image 0.3s;
+}
+
+.dotsContainer span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.dotsContainer span:nth-child(3) {
+  transform: rotate(69deg);
+}
+.dotsContainer span:nth-child(4) {
+  transform: rotate(123deg);
+}
+.cubeContainer {
+  position: relative;
+  transform: translateX(-50px) translateY(50px);
+  animation: fadein 0.8s ease-out;
+}
+
+.react,
+.vanilla,
+.vue,
+.angular {
+  cursor: pointer;
+  position: absolute;
+  transform: scale(0.5, 0.5);
+}
+.react {
+  bottom: 150px;
+  left: 0;
+}
+.react .cubeBox {
+  animation-delay: -10s;
+}
+.react .cubeSide {
+  background-color: rgba(var(--blue), var(--square-alpha));
+  box-shadow: #61dafb var(--box-shadow);
+}
+
+.vanilla {
+  bottom: 0;
+  left: 150px;
+}
+.vanilla .cubeBox {
+  animation-delay: -15s;
+}
+.vanilla .cubeSide {
+  background-color: rgba(var(--orange), var(--square-alpha));
+  box-shadow: #dfb07a var(--box-shadow);
+}
+
+.angular {
+  bottom: -150px;
+  left: 0;
+}
+.angular .cubeBox {
+  animation-delay: -50s;
+}
+.angular .cubeSide {
+  background-color: rgba(var(--red), var(--square-alpha));
+  box-shadow: #dd0031 var(--box-shadow);
+}
+
+.vue {
+  bottom: 0;
+  left: -150px;
+}
+.vue .cubeBox {
+  animation-delay: -45s;
+}
+.vue .cubeSide {
+  background-color: rgba(var(--green), var(--square-alpha));
+  box-shadow: #41b883 var(--box-shadow);
+}
+
+.cubeBox {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  animation: 120s linear 0s infinite normal none running rotate;
+}
+
+.cubeSide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(50, 50, 50, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.cubeFront {
+  transform-origin: 50% 50%;
+  will-change: transform;
+  transform: rotateY(0deg) translateZ(50px);
+}
+
+.cubeBack {
+  transform-origin: 50% 50%;
+  will-change: transform;
+  transform: rotateX(180deg) translateZ(50px);
+}
+
+.cubeLeft {
+  transform-origin: 50% 50%;
+  will-change: transform;
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.cubeRight {
+  transform-origin: 50% 50%;
+  will-change: transform;
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.cubeTop {
+  transform-origin: 50% 50%;
+  will-change: transform;
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.cubeBottom {
+  transform-origin: 50% 50%;
+  will-change: transform;
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(77deg) rotateX(-5.5deg);
+  }
+  100% {
+    transform: rotateY(437deg) rotateX(354.5deg);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
