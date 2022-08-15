@@ -14,7 +14,7 @@ const Viewer = () => {
   }, [])
 
   return (
-    <div className="h-full w-full overflow-hidden">
+    <div className="h-screen lg:h-full w-screen lg:w-full overflow-hidden bg-[#000]">
       <SinglePage pdfEng={pdfEng} pdfChn={pdfChn} width={width} />
     </div>
   )

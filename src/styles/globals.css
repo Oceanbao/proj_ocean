@@ -19,9 +19,6 @@
 }
 .react-pdf__Page__textContent {
   height: 0;
-  border: 1px solid darkgrey;
-  box-shadow: 5px 5px 5px 1px #ccc;
-  border-radius: 5px;
 }
 
 .react-pdf__Page__annotations.annotationLayer {

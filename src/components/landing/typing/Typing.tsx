@@ -6,8 +6,8 @@ const Typing = () => {
   return (
     <ReactTypingEffect
       className={cn(s.typing)}
-      staticText="Hi, I'm Ocean. I'm a"
-      text={['web developer.', 'danguage geek.', 'data visualiser.']}
+      staticText="I"
+      text={['create web apps.', 'write language content.', 'visualise data.']}
       speed={50}
       eraseSpeed={100}
       eraseDelay={3000}
@@ -16,11 +16,13 @@ const Typing = () => {
       displayTextRenderer={(text, i) => {
         return (
           <h1>
-            {text.split('').map((char, i) => {
+            {text.split(' ').map((ss, i) => {
               const key = `${i}`
+              let color = '#F038FF'
+              if (i === 0) color = '#FF4136'
               return (
-                <span key={key} style={{ color: '#FBD26A' }}>
-                  {char}
+                <span key={key} style={{ color }}>
+                  {ss + ' '}
                 </span>
               )
             })}

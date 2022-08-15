@@ -84,14 +84,18 @@ export default function SinglePage({ pdfEng, pdfChn, width }: { pdfEng: any; pdf
       <div className="flex gap-2 justify-around items-center flex-wrap my-2">
         <div className="flex gap-2">
           <button
-            className="rounded-md px-2 py-2 text-[#470024] bg-[#FBD26A]"
+            className={`rounded-md px-2 py-2 ${pdf.includes('chn') ? 'text-[#fff]' : 'text-[#000]'} ${
+              pdf.includes('chn') ? 'bg-[#0070f3]' : 'bg-[#fff]'
+            }`}
             type="button"
             onClick={() => setPdf(pdfChn)}
           >
             {'\u4e2d'}
           </button>
           <button
-            className="rounded-md px-2 py-2 text-[#470024] bg-[#FBD26A]"
+            className={`rounded-md px-2 py-2 ${pdf.includes('eng') ? 'text-[#fff]' : 'text-[#000]'} ${
+              pdf.includes('eng') ? 'bg-[#0070f3]' : 'bg-[#fff]'
+            }`}
             type="button"
             onClick={() => setPdf(pdfEng)}
           >
