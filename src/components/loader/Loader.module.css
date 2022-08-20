@@ -32,8 +32,8 @@
 .object {
   width: 25px;
   height: 25px;
-  background-color: #fff;
   float: left;
+  background-image: linear-gradient(to top, var(--color-square-start), var(--color-square-end));
 }
 
 .objectOne {
